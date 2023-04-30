@@ -1,0 +1,29 @@
+﻿@model CoolEventsWeb.ViewModels.EventViewModel
+
+<form method="post">
+    <div>
+        <div class="form-group row">
+            <div class="col-6 text-right">
+                <label asp-for="Event"></label>
+            </div>
+            <div class="col-6 text-left">
+                <input asp-for="Event" placeholder="Event">
+                <span asp-validation-for="Event" class="text-danger"></span>
+            </div>
+        </div>
+        <hr />
+        <div class="form-group row">
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-success">Edit</button>
+                <br />
+                <a asp-controller="Event" asp-action="Index">Back</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
